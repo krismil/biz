@@ -1,0 +1,15 @@
+// idl/hello/hello.proto
+syntax = "proto3";
+
+package home;
+
+option go_package = "hertz/home";
+
+import "api.proto";
+
+message Empty {}
+service HomeService {
+  rpc Home(Empty) returns(Empty) {
+    option (api.get) = "/";
+  }
+}
