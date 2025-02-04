@@ -3,7 +3,7 @@ package service
 import (
 	"context"
 	"github.com/cloudwego/hertz/pkg/app"
-	home "github.com/krismil/biz/gomall/app/frontend/hertz_gen/hertz/home"
+	home "github.com/krismil/biz/gomall/app/frontend/hertz_gen/frontend/home"
 )
 
 type HomeService struct {

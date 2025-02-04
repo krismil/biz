@@ -4,6 +4,9 @@ package main
 
 import (
 	"context"
+	"github.com/cloudwego/hertz/pkg/app"
+	"github.com/cloudwego/hertz/pkg/common/utils"
+	"github.com/cloudwego/hertz/pkg/protocol/consts"
 	"time"
 
 	"github.com/cloudwego/hertz/pkg/app/middlewares/server/recovery"
@@ -29,13 +32,18 @@ func main() {
 	registerMiddleware(h)
 
 	// add a ping route to test
-	//h.GET("/ping", func(c context.Context, ctx *app.RequestContext) {
-	//	ctx.JSON(consts.StatusOK, utils.H{"ping": "pong"})
-	//})
+	h.GET("/ping", func(c context.Context, ctx *app.RequestContext) {
+		ctx.JSON(consts.StatusOK, utils.H{"ping": "pong"})
+	})
 
 	router.GeneratedRegister(h)
 	h.LoadHTMLGlob("template/*")
 	h.Static("/static", "./")
+
+	h.GET("/sign-in", func(c context.Context, ctx *app.RequestContext) {
+		ctx.HTML(consts.StatusOK, "sign-in", utils.H{"Title": "Sign In"})
+	})
+
 	h.Spin()
 }
 

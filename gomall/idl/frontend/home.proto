@@ -1,9 +1,9 @@
 // idl/hello/hello.proto
 syntax = "proto3";
 
-package home;
+package frontend.home;
 
-option go_package = "hertz/home";
+option go_package = "frontend/home";
 
 import "api.proto";
 

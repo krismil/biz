@@ -7,7 +7,7 @@ import (
 	"github.com/cloudwego/hertz/pkg/protocol/consts"
 	"github.com/krismil/biz/gomall/app/frontend/biz/service"
 	"github.com/krismil/biz/gomall/app/frontend/biz/utils"
-	home "github.com/krismil/biz/gomall/app/frontend/hertz_gen/hertz/home"
+	home "github.com/krismil/biz/gomall/app/frontend/hertz_gen/frontend/home"
 )
 
 // Home .
@@ -27,5 +27,5 @@ func Home(ctx context.Context, c *app.RequestContext) {
 		return
 	}
 
-	c.HTML(consts.StatusOK, "home.tmpl", resp)
+	c.HTML(consts.StatusOK, "home", resp)
 }
