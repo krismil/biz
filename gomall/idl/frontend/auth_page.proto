@@ -2,8 +2,8 @@ syntax = "proto3";
 
 package frontend.auth;
 
-import "api.proto";
-import "frontend/common.proto";
+import "gomall/idl/api.proto";
+import "gomall/idl/frontend/common.proto";
 
 option go_package = "/frontend/auth";
 
@@ -25,5 +25,8 @@ service AuthService {
   }
   rpc login(LoginReq) returns (common.Empty) {
     option (api.post) = "/auth/login";
+  }
+  rpc logout(common.Empty) returns (common.Empty) {
+    option (api.post) = "/auth/logout";
   }
 }

@@ -7,6 +7,8 @@ import (
 	"github.com/cloudwego/hertz/pkg/app"
 	"github.com/cloudwego/hertz/pkg/common/utils"
 	"github.com/cloudwego/hertz/pkg/protocol/consts"
+	"github.com/hertz-contrib/sessions"
+	"github.com/hertz-contrib/sessions/redis"
 	"time"
 
 	"github.com/cloudwego/hertz/pkg/app/middlewares/server/recovery"
@@ -41,13 +43,26 @@ func main() {
 	h.Static("/static", "./")
 
 	h.GET("/sign-in", func(c context.Context, ctx *app.RequestContext) {
-		ctx.HTML(consts.StatusOK, "sign-in", utils.H{"Title": "Sign In"})
+		data := utils.H{
+			"Title": "Sign In",
+			"Next":  ctx.Request.Header.Get("Referer"),
+		}
+		ctx.HTML(consts.StatusOK, "sign-in", data)
+	})
+
+	h.GET("/sign-up", func(c context.Context, ctx *app.RequestContext) {
+		ctx.HTML(consts.StatusOK, "sign-up", utils.H{"Title": "Sign Up"})
 	})
 
 	h.Spin()
 }
 
 func registerMiddleware(h *server.Hertz) {
+
+	//TODO 别忘了把secret放环境里
+	store, _ := redis.NewStore(10, "tcp", "localhost:6379", "", []byte("secret"))
+	h.Use(sessions.New("shop", store))
+
 	// log
 	logger := hertzlogrus.NewLogger()
 	hlog.SetLogger(logger)
