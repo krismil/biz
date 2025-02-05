@@ -12,7 +12,7 @@
       <body class="min-vh-100">
         <header>
         <nav class="navbar navbar-expand-lg bg-body-tertiary">
-          <div class="container-fluid">
+          <div class="container">
             <img class="navbar-brand" href="#" src="/static/image/logo.png" alt="老师好我叫盒同学" style="height: 3em"/>
             <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
               <span class="navbar-toggler-icon"></span>
@@ -20,7 +20,7 @@
             <div class="collapse navbar-collapse" id="navbarSupportedContent">
               <ul class="navbar-nav me-auto mb-2 mb-lg-0">
                 <li class="nav-item">
-                  <a class="nav-link active" aria-current="page" href="#">Home</a>
+                  <a class="nav-link active" aria-current="page" href="/">Home</a>
                 </li>
                 <li class="nav-item dropdown">
                   <a class="nav-link dropdown-toggle" href="#" role="button" data-bs-toggle="dropdown" aria-expanded="false">
@@ -32,7 +32,7 @@
                   </ul>
                 </li>
                 <li class="nav-item">
-                  <a class="nav-link">About</a>
+                  <a class="nav-link active" href="/about">About</a>
                 </li>
               </ul>
               <form class="d-flex" role="search">
@@ -43,12 +43,27 @@
               <div class="ms-3">
                 <i class="fas fa-shopping-cart"></i>
               </div>
-              <div class="ms-3">
-                <i class="fas fa-user"></i>
+              {{ if .user_id }}
+              <div class="nav-item dropdown ms-3">
+                  <a class="nav-link dropdown-toggle" data-bs-toggle="dropdown" href="#" role="button"
+                     aria-expanded="false"><i class="fa-solid fa-user me-2"></i>Hello</a>
+                  <ul class="dropdown-menu">
+                      <li><a class="dropdown-item" href="/order">Order Center</a></li>
+                      <li>
+                          <hr class="dropdown-divider">
+                      </li>
+                      <li>
+                          <form class="d-flex ms-auto" action="/auth/logout" method="post">
+                          <button class="dropdown-item" type="submit">Logout</button>
+                          </form>
+                      </li>
+                  </ul>
               </div>
-              <div class="ms-3">
-                <a type="butten" class="btn btn-primary" href="/sign-in">Sign In</a>
+          {{ else }}
+              <div class="btn-group ms-3" role="group" aria-label="Basic mixed styles example">
+                  <a href="/sign-in" class="btn btn-primary">Sign in</a>
               </div>
+          {{ end }}
             </div>
           </div>
         </nav>

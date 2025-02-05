@@ -3,7 +3,7 @@ package main
 import (
 	"context"
 	"github.com/krismil/biz/gomall/app/auth/biz/service"
-	
+	"github.com/krismil/biz/gomall/rpc_gen/kitex_gen/auth"
 )
 
 // AuthServiceImpl implements the last service interface defined in the IDL.

@@ -26,4 +26,7 @@ service AuthService {
   rpc login(LoginReq) returns (common.Empty) {
     option (api.post) = "/auth/login";
   }
+  rpc logout(common.Empty) returns (common.Empty) {
+    option (api.post) = "/auth/logout";
+  }
 }

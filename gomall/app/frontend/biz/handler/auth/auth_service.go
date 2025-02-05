@@ -22,14 +22,13 @@ func Register(ctx context.Context, c *app.RequestContext) {
 		return
 	}
 
-	resp := &common.Empty{}
-	resp, err = service.NewRegisterService(ctx, c).Run(&req)
+	_, err = service.NewRegisterService(ctx, c).Run(&req)
 	if err != nil {
 		utils.SendErrResponse(ctx, c, consts.StatusOK, err)
 		return
 	}
 
-	utils.SendSuccessResponse(ctx, c, consts.StatusOK, resp)
+	c.Redirect(consts.StatusOK, []byte("/"))
 }
 
 // Login .
@@ -43,11 +42,31 @@ func Login(ctx context.Context, c *app.RequestContext) {
 		return
 	}
 
-	_, err = service.NewLoginService(ctx, c).Run(&req)
+	redirect, err := service.NewLoginService(ctx, c).Run(&req)
 	if err != nil {
 		utils.SendErrResponse(ctx, c, consts.StatusOK, err)
 		return
 	}
 
-	utils.SendSuccessResponse(ctx, c, consts.StatusOK, "done")
+	c.Redirect(consts.StatusOK, []byte(redirect))
+}
+
+// Logout .
+// @router /auth/logout [POST]
+func Logout(ctx context.Context, c *app.RequestContext) {
+	var err error
+	var req common.Empty
+	err = c.BindAndValidate(&req)
+	if err != nil {
+		utils.SendErrResponse(ctx, c, consts.StatusOK, err)
+		return
+	}
+
+	_, err = service.NewLogoutService(ctx, c).Run(&req)
+
+	if err != nil {
+		utils.SendErrResponse(ctx, c, consts.StatusOK, err)
+		return
+	}
+	c.Redirect(consts.StatusOK, []byte("/"))
 }
