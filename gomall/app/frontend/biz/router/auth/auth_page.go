@@ -22,6 +22,5 @@ func Register(r *server.Hertz) {
 		_auth.POST("/login", append(_loginMw(), auth.Login)...)
 		_auth.POST("/logout", append(_logoutMw(), auth.Logout)...)
 		_auth.POST("/register", append(_registerMw(), auth.Register)...)
-		_auth.POST("/logout", append(_registerMw(), auth.Logout)...)
 	}
 }
