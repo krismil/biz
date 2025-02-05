@@ -2,13 +2,13 @@ package auth
 
 import (
 	"context"
-	"github.com/krismil/biz/gomall/app/frontend/hertz_gen/frontend/common"
 
 	"github.com/cloudwego/hertz/pkg/app"
 	"github.com/cloudwego/hertz/pkg/protocol/consts"
 	"github.com/krismil/biz/gomall/app/frontend/biz/service"
 	"github.com/krismil/biz/gomall/app/frontend/biz/utils"
 	auth "github.com/krismil/biz/gomall/app/frontend/hertz_gen/frontend/auth"
+	common "github.com/krismil/biz/gomall/app/frontend/hertz_gen/frontend/common"
 )
 
 // Register .
@@ -29,7 +29,6 @@ func Register(ctx context.Context, c *app.RequestContext) {
 	}
 
 	c.Redirect(consts.StatusOK, []byte("/"))
-	//utils.SendSuccessResponse(ctx, c, consts.StatusOK, resp)
 }
 
 // Login .
@@ -50,8 +49,6 @@ func Login(ctx context.Context, c *app.RequestContext) {
 	}
 
 	c.Redirect(consts.StatusOK, []byte(redirect))
-
-	//utils.SendSuccessResponse(ctx, c, consts.StatusOK, "done")
 }
 
 // Logout .
@@ -66,11 +63,10 @@ func Logout(ctx context.Context, c *app.RequestContext) {
 	}
 
 	_, err = service.NewLogoutService(ctx, c).Run(&req)
+
 	if err != nil {
 		utils.SendErrResponse(ctx, c, consts.StatusOK, err)
 		return
 	}
-	redirect := "/"
-
-	c.Redirect(consts.StatusFound, []byte(redirect))
+	c.Redirect(consts.StatusOK, []byte("/"))
 }

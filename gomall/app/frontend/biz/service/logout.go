@@ -2,9 +2,9 @@ package service
 
 import (
 	"context"
+	"github.com/hertz-contrib/sessions"
 
 	"github.com/cloudwego/hertz/pkg/app"
-	"github.com/hertz-contrib/sessions"
 	common "github.com/krismil/biz/gomall/app/frontend/hertz_gen/frontend/common"
 )
 
@@ -23,6 +23,6 @@ func (h *LogoutService) Run(req *common.Empty) (resp *common.Empty, err error) {
 	err = session.Save()
 	if err != nil {
 		return nil, err
-	}
+	} //nolint:errcheck
 	return
 }
