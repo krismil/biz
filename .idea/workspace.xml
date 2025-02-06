@@ -1,0 +1,134 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<project version="4">
+  <component name="AutoImportSettings">
+    <option name="autoReloadType" value="ALL" />
+  </component>
+  <component name="ChangeListManager">
+    <list default="true" id="94b7a9f5-18f8-40c0-a68b-dce2bc7eea27" name="更改" comment="修改了注册时前端传递给后端确认密码的名称错误导致无法正确写入的bug">
+      <change afterPath="$PROJECT_DIR$/gomall/idl/frontend/product_page.proto" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/gomall/idl/product.proto" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/gomall/app/frontend/.hz" beforeDir="false" afterPath="$PROJECT_DIR$/gomall/app/frontend/.hz" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/gomall/app/frontend/template/header.tmpl" beforeDir="false" afterPath="$PROJECT_DIR$/gomall/app/frontend/template/header.tmpl" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/gomall/app/user/.env" beforeDir="false" afterPath="$PROJECT_DIR$/gomall/app/user/.env" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/gomall/rpc_gen/go.mod" beforeDir="false" afterPath="$PROJECT_DIR$/gomall/rpc_gen/go.mod" afterDir="false" />
+    </list>
+    <option name="SHOW_DIALOG" value="false" />
+    <option name="HIGHLIGHT_CONFLICTS" value="true" />
+    <option name="HIGHLIGHT_NON_ACTIVE_CHANGELIST" value="false" />
+    <option name="LAST_RESOLUTION" value="IGNORE" />
+  </component>
+  <component name="FileTemplateManagerImpl">
+    <option name="RECENT_TEMPLATES">
+      <list>
+        <option value="Go File" />
+      </list>
+    </option>
+  </component>
+  <component name="GOROOT" url="file://$USER_HOME$/sdk/go1.23.4" />
+  <component name="Git.Settings">
+    <option name="RECENT_BRANCH_BY_REPOSITORY">
+      <map>
+        <entry key="$PROJECT_DIR$" value="main" />
+      </map>
+    </option>
+    <option name="RECENT_GIT_ROOT_PATH" value="$PROJECT_DIR$" />
+  </component>
+  <component name="ProjectColorInfo">{
+  &quot;associatedIndex&quot;: 4
+}</component>
+  <component name="ProjectId" id="2sbmeDAXdLFB5kQciYPZja5WiNy" />
+  <component name="ProjectViewState">
+    <option name="hideEmptyMiddlePackages" value="true" />
+    <option name="showLibraryContents" value="true" />
+  </component>
+  <component name="PropertiesComponent"><![CDATA[{
+  "keyToString": {
+    "DefaultGoTemplateProperty": "Go File",
+    "Go 构建.go build github.com/krismil/biz/gomall/app/frontend.executor": "Run",
+    "Go 构建.go build github.com/krismil/biz/gomall/app/product.executor": "Run",
+    "Go 构建.go build github.com/krismil/biz/gomall/app/user.executor": "Run",
+    "RunOnceActivity.ShowReadmeOnStart": "true",
+    "RunOnceActivity.go.formatter.settings.were.checked": "true",
+    "RunOnceActivity.go.migrated.go.modules.settings": "true",
+    "RunOnceActivity.go.modules.automatic.dependencies.download": "true",
+    "RunOnceActivity.go.modules.go.list.on.any.changes.was.set": "true",
+    "git-widget-placeholder": "yy",
+    "go.import.settings.migrated": "true",
+    "go.sdk.automatically.set": "true",
+    "last_opened_file_path": "C:/Users/funstuff/Desktop/work",
+    "node.js.detected.package.eslint": "true",
+    "node.js.selected.package.eslint": "(autodetect)",
+    "nodejs_package_manager_path": "npm",
+    "settings.editor.selected.configurable": "preferences.fileTypes"
+  }
+}]]></component>
+  <component name="RunManager" selected="Go 构建.go build github.com/krismil/biz/gomall/app/product">
+    <configuration name="go build github.com/krismil/biz/gomall/app/frontend" type="GoApplicationRunConfiguration" factoryName="Go Application" temporary="true" nameIsGenerated="true">
+      <module name="work" />
+      <working_directory value="$PROJECT_DIR$/gomall/app/frontend" />
+      <kind value="PACKAGE" />
+      <package value="github.com/krismil/biz/gomall/app/frontend" />
+      <directory value="$PROJECT_DIR$" />
+      <method v="2" />
+    </configuration>
+    <configuration name="go build github.com/krismil/biz/gomall/app/product" type="GoApplicationRunConfiguration" factoryName="Go Application" temporary="true" nameIsGenerated="true">
+      <module name="work" />
+      <working_directory value="$PROJECT_DIR$/gomall/app/product" />
+      <kind value="PACKAGE" />
+      <package value="github.com/krismil/biz/gomall/app/product" />
+      <directory value="$PROJECT_DIR$" />
+      <method v="2" />
+    </configuration>
+    <configuration name="go build github.com/krismil/biz/gomall/app/user" type="GoApplicationRunConfiguration" factoryName="Go Application" temporary="true" nameIsGenerated="true">
+      <module name="work" />
+      <working_directory value="$PROJECT_DIR$/gomall/app/user" />
+      <kind value="PACKAGE" />
+      <package value="github.com/krismil/biz/gomall/app/user" />
+      <directory value="$PROJECT_DIR$" />
+      <method v="2" />
+    </configuration>
+    <recent_temporary>
+      <list>
+        <item itemvalue="Go 构建.go build github.com/krismil/biz/gomall/app/product" />
+        <item itemvalue="Go 构建.go build github.com/krismil/biz/gomall/app/user" />
+        <item itemvalue="Go 构建.go build github.com/krismil/biz/gomall/app/frontend" />
+      </list>
+    </recent_temporary>
+  </component>
+  <component name="SharedIndexes">
+    <attachedChunks>
+      <set>
+        <option value="bundled-gosdk-33c477a475b1-b97fc8a1e17c-org.jetbrains.plugins.go.sharedIndexes.bundled-GO-241.14494.238" />
+        <option value="bundled-js-predefined-1d06a55b98c1-74d2a5396914-JavaScript-GO-241.14494.238" />
+      </set>
+    </attachedChunks>
+  </component>
+  <component name="SpellCheckerSettings" RuntimeDictionaries="0" Folders="0" CustomDictionaries="0" DefaultDictionary="应用程序级" UseSingleDictionary="true" transferred="true" />
+  <component name="TypeScriptGeneratedFilesManager">
+    <option name="version" value="3" />
+  </component>
+  <component name="VcsManagerConfiguration">
+    <MESSAGE value="Added logout functionality, improved frontend UI for registration, login, and logout, introduced session for user ID retrieval, and enhanced navigation logic." />
+    <MESSAGE value="修改了注册时前端传递给后端确认密码的名称错误导致无法正确写入的bug" />
+    <option name="LAST_COMMIT_MESSAGE" value="修改了注册时前端传递给后端确认密码的名称错误导致无法正确写入的bug" />
+  </component>
+  <component name="VgoProject">
+    <settings-migrated>true</settings-migrated>
+  </component>
+  <component name="XDebuggerManager">
+    <breakpoint-manager>
+      <breakpoints>
+        <line-breakpoint enabled="true" type="DlvLineBreakpoint">
+          <url>file://$PROJECT_DIR$/gomall/app/product/biz/handler/product/product_catalog_service.go</url>
+          <line>2</line>
+          <option name="timeStamp" value="2" />
+        </line-breakpoint>
+        <line-breakpoint enabled="true" type="DlvLineBreakpoint">
+          <url>file://$USER_HOME$/go/pkg/mod/github.com/cloudwego/biz-demo/gomall/app/product@v0.0.0-20250107114945-cd595cc0e3ad/biz/dal/mysql/init.go</url>
+          <line>35</line>
+          <option name="timeStamp" value="3" />
+        </line-breakpoint>
+      </breakpoints>
+    </breakpoint-manager>
+  </component>
+</project>
